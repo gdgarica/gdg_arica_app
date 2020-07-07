@@ -1,0 +1,73 @@
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+*~
+*.sw[mnpcod]
+.tmp
+*.tmp
+*.tmp.*
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+UserInterfaceState.xcuserstate
+$RECYCLE.BIN/
+
+*.log
+log.txt
+npm-debug.log*
+
+/.idea
+/.ionic
+/.sass-cache
+/.sourcemaps
+/.versions
+/.vscode
+/coverage
+/plugins
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+## server
+/server/node_modules
+/server/dist
+/server/npm-debug.log
+
+## client
+# compiled output
+/client/dist
+/client/www
+/client/tmp
+/client/dist-server
+/client/out-tsc
+/client/platforms
+# dependencies
+/client/node_modules
+# misc
+/client/npm-debug.log
+/client/.sass-cache
+/client/connect.lock
+/client/coverage
+/client/libpeerconnection.log
+/client/testem.log
+/client/typings
+# e2e
+/client/e2e/*.js
+/client/e2e/*.map
+# System Files
+.DS_Store
+Thumbs.db
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
