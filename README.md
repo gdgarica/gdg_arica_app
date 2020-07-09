@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.meetup.com/Angular-Medellin/">
+  <a href="https://www.gdgarica.dev/">
     <img width=100% src="https://i.imgur.com/XlNkPWC.png">
   </a>
 </p>
