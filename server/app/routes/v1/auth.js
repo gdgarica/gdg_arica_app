@@ -3,14 +3,11 @@
 const express = require('express');
 const { authCtrl } = require('../../controllers');
 
-const api = express.Router();
+const router = express.Router();
 
-api.post('/token', authCtrl.signToken);
+router.post('/token', authCtrl.signToken);
+// gg.com/api/v1/auth/login
+// gg.com/api/v1/auth/register
+// gg.com/api/v1/auth/recuperar_contraseña
 
-module.exports = api;
-/*
-app.get('/verify', (req, res) => {
-  res.send({
-    message: 'json dis ok'
-  });
-});*/
+module.exports = router;

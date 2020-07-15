@@ -1,16 +1,13 @@
 'use strict';
 
-const jwt = require('jsonwebtoken');
-const { config } = require('../../app/config');
+const JwtService = require('../services/jwt');
+const _jwtSrv = new JwtService();
 
 const signToken = async (req, res, next) => {
   const { email, username, name } = req.body;
   console.log(email, username, name);
-  /*const SIGN_OPTIONS = {
-              algorithm: 'RS256', // algoritmo asimétrico. Token se crea y firma con una clave privada, pero se verifican con la clave pública.
-              expiresIn: '15m'
-            };*/
-  const token = jwt.sign({ sub: username, email, name }, config.authJwtSecret);
+
+  const token = await _jwtSrv.signToken(username, email, name);
   res.json({ access_token: token });
 };
 
