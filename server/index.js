@@ -10,6 +10,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 app.use('/api/v1', _routes);
 
+require('./app/lib/mongodb');
+
 app.listen(9000, () => {
   console.log('Server corriendo xD');
 });
