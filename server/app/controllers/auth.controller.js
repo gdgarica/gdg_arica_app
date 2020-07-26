@@ -1,6 +1,6 @@
 'use strict';
 
-const _jwtSrv = require('../services/jwt');
+const _jwtSrv = require('../services/jwt.service');
 
 const loginUser = async (req, res, next) => {
   const { email, password } = req.body;

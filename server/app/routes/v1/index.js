@@ -1,5 +1,5 @@
 const express = require('express');
-const auth = require('./auth');
+const auth = require('./auth.route');
 
 const app = express();
 
