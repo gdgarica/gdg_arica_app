@@ -20,7 +20,7 @@ const init = () => {
 
 const db = mongoose.connection;
 db.on('connected', () => {
-  console.log('[+] Connected succesfully with mongo.');
+  console.log(' [+] Connected succesfully with mongo.');
 });
 db.on('error', console.error.bind(console, 'connection error:'));
 
