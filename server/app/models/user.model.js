@@ -1,11 +1,12 @@
-// http://devsmash.com/blog/implementing-max-login-attempts-with-mongoose
+// http://devsmash.com/blog/password-authentication-with-mongoose-and-bcrypt
+
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const SALT_WORK_FACTOR = 10;
-const Schema = mongoose.Schema;
 
-var UserSchema = new Schema(
+const UserSchema = mongoose.Schema(
   {
+    _id: mongoose.Schema.Types.ObjectId,
     name: {
       type: String,
       required: true,
@@ -40,12 +41,9 @@ var UserSchema = new Schema(
 );
 
 // Hashea la password antes de insertar el registro en la db
-// https://stackoverflow.com/questions/32359720/how-get-this-from-arrow-function
 UserSchema.pre('save', function (next) {
-  console.log('ejecuta el pre-hook: ', this);
-  var user = this;
-  console.log('ejecuta el pre-hook: ', user.password);
-  bcrypt.hash(user.password, 10, (err, hash) => {
+  const user = this;
+  bcrypt.hash(user.password, SALT_WORK_FACTOR, (err, hash) => {
     if (err) return next(err);
     user.password = hash;
     next();
