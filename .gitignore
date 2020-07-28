@@ -37,6 +37,7 @@ out-tsc/
 
 ## server
 /server/npm-debug.log
+#/server/.env
 
 ## client
 # compiled output

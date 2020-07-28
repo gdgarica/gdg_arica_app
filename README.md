@@ -5,6 +5,7 @@
 </p>
 
 <h1 align="center"> ⭐️ GDG Arica App ⭐️ </h1>
+
 # Contenido
 
 # Características
