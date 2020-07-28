@@ -8,6 +8,11 @@
 
 # Contenido
 
+# Desarrollo
+
+Primero que todo, duplicar el archivo `.env-sample`, renombrarlo a `.env` y
+reemplazar los valores necesarios.
+
 # Características
 
 - OAuth Login

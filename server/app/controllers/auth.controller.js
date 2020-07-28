@@ -8,9 +8,15 @@ const User = require('../models/user.model');
 
 const loginUser = async (req, res, next) => {
   const { email, password } = req.body;
-  console.log(email, password);
+  if ((email, password)) {
+    console.log(email, password);
+    const token = await _jwtSrv.signToken(username, email, name);
+    return res.json({
+      mensaje: 'Autenticación correcta',
+      token: token
+    });
+  }
 
-  const token = await _jwtSrv.signToken(username, email, name);
   res.json({ access_token: token });
 };
 
