@@ -28,21 +28,22 @@ npm-debug.log*
 
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+# dependencies
+node_modules/
+dist/
+www/
+out-tsc/
+
+
 ## server
-/server/node_modules
-/server/dist
 /server/npm-debug.log
 
 ## client
 # compiled output
-/client/dist
-/client/www
 /client/tmp
 /client/dist-server
-/client/out-tsc
 /client/platforms
-# dependencies
-/client/node_modules
+
 # misc
 /client/npm-debug.log
 /client/.sass-cache
