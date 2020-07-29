@@ -1,8 +1,8 @@
 const jwt = require('jsonwebtoken');
-const { config } = require('../config');
+const { JWT_SECRET } = require('../config').config;
 
 const signToken = (username, email, name) => {
-  return jwt.sign({ sub: username, email, name }, config.authJwtSecret);
+  return jwt.sign({ sub: username, email, name }, JWT_SECRET);
 };
 
 const verifyToken = () => {};

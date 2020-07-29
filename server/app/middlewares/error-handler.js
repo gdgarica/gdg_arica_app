@@ -1,4 +1,4 @@
-const { config } = require('../config');
+const config = require('../config');
 
 const withErrorStack = (err, stack) => {
   if (config.dev) return { err, stack };

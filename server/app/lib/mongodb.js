@@ -1,13 +1,11 @@
 const mongoose = require('mongoose');
-const { config } = require('../config');
+// Constants
+const { MONGO_USER, MONGO_PASS, MONGO_NAME, MONGO_HOST } = require('../config');
 
-const USER = encodeURI(config.mongoDbUser);
-const PASS = encodeURI(config.mongoDbPass);
-const DB_NAME = config.mongoDbName;
-const DB_HOST = config.mongoDbHost;
-const DB_PORT = config.mongoDbPort;
+const USER = encodeURI(MONGO_USER);
+const PASS = encodeURI(MONGO_PASS);
 
-const MONGODB_URI = `mongodb+srv://${USER}:${PASS}@${DB_HOST}/${DB_NAME}?retryWrites=true&w=majority`;
+const MONGODB_URI = `mongodb+srv://${USER}:${PASS}@${MONGO_HOST}/${MONGO_NAME}?retryWrites=true&w=majority`;
 
 const init = () => {
   return mongoose.connect(MONGODB_URI, {
